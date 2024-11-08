@@ -10,7 +10,7 @@
 // } 
 
 
-// document.getElementById("btn").addEventListener("click", function change() {
+// document.getElementById("btn1").addEventListener("click", function change() {
 //     document.getElementById("btn").style.color = "red";
 //     let bet = document.getElementById("text").innerHTML;
 //     let content = "hghdgx";
@@ -54,6 +54,11 @@
     //     document.getElementById("input").value = content;
     // }
     
+
+
+
+
+
     
 let content = "";
 
@@ -86,7 +91,7 @@ document.getElementById("btn2").addEventListener("click", function() {
 
 // Event listener for the AC button
 document.getElementById("btn1").addEventListener("click", function() {
-    content = "0";
+    content = "";
     document.getElementById("input").value = content;
 });
 
@@ -149,7 +154,7 @@ document.getElementById("btn14").addEventListener("click", function() {
 
 // Event listener for the #3 button
 document.getElementById("btn15").addEventListener("click", function() {
-    let character = document.getElementById("bt15").textContent;
+    let character = document.getElementById("btn15").textContent;
     content += character;
     document.getElementById("input").value = content;
 });
@@ -200,12 +205,40 @@ document.getElementById("btn3").addEventListener("click", function() {
     document.getElementById("input").value = content;
 });
 
+// // Event listener for the = button
+// // TRY 1
+// document.getElementById("btn20").addEventListener("click", function() {
+//     content = eval(content);
+//     document.getElementById("input").value = content;
+// });
+
 // Event listener for the = button
+//  TRY 2
 document.getElementById("btn20").addEventListener("click", function() {
-    let character = document.getElementById("btn20").textContent;
-    content += character;
-    document.getElementById("input").value = content;
+    // Check if content only contains numbers, +, -, *, /, or .
+    if (/^[0-9+\-*/.()]+$/.test(content)) {
+        try {
+            content = eval(content); // Safely evaluate the expression
+            document.getElementById("input").value = content;
+        } catch (e) {
+            document.getElementById("input").value = "Error"; // Display error for invalid expressions
+        }
+    } else {
+        document.getElementById("input").value = "Invalid input"; // Show error for invalid characters
+    }
 });
+
+// // Event listener for the = button    
+// //  TRY 3
+// document.getElementById("btn20").addEventListener("click", function() {
+//     try {
+//         // Function constructor to evaluate the expression safely
+//         content =  new Function(`return ${content}`)();
+//         document.getElementById("input").value = content;
+//     } catch (e) {
+//         document.getElementById("input").value = "Error";
+//     }
+// });
 
 
 

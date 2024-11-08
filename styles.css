@@ -12,27 +12,43 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(1, 1, 55, 0.939);
+    background-color: rgb(68, 11, 82);
+    min-block-size: 35px;
+    min-width: 40px;
 
 }
 
 .calculator {
     justify-content: center;
     border: 1px solid grey;
-    padding: 20px;
+    padding: 10px;
+    padding-left: 15px; 
     border-radius: 16px;
     background: transparent;
+    height: 420px;
+    width: 400px;
+    box-shadow: 8px 8px  8px rgb(12, 12, 13);
+    
+}
 
+.calculator2 {
+    justify-content: center;
+    background: transparent;
+    border-radius: 16px;
+    height: 420px;
+    width: 400px;
+    box-shadow: -8px 8px 8px rgb(12, 12, 13);
+    
 }
 
 input {
-    width: 320px;
+    width: 350px;
     border: none;
     padding: 24px;
     margin: 10px;
     background: transparent;
     font-size: 40px;
-    text-align: right;
+    text-align: left;
     cursor: pointer;
     color: aliceblue;
 
@@ -44,30 +60,33 @@ input ::placeholder{
 }
 
 button{
-    border: none;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 10px;
-    border-radius: 50%;
+    border-radius: 30%;
     background-color: rgb(39, 46, 61);
     color: orange;
     font-size: 20px;
-    box-shadow: -8px -8px 15px rgb(49, 49, 99);
+    box-shadow: 8px 8px 15px rgb(12, 12, 13);
     cursor: pointer;
+    
 }
 
-.equalBtn {
-    background-color: orange;
+.equalToBtn {
+    background-color: rgb(209, 141, 14);
     color: rgb(39, 46, 61);
 
 
 }
 
-.operator {
-    color: rgb(0, 255, 255);
+.operators {
+    color: rgb(38, 255, 0);
 }
 
-
+.clearances {
+    background-color: rgb(13, 189, 10);
+    color:  rgb(68, 11, 82);
+}
 
 
 
