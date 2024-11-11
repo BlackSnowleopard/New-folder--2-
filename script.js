@@ -205,43 +205,75 @@ document.getElementById("btn3").addEventListener("click", function() {
     document.getElementById("input").value = content;
 });
 
-// // Event listener for the = button
-// // TRY 1
-// document.getElementById("btn20").addEventListener("click", function() {
-//     content = eval(content);
-//     document.getElementById("input").value = content;
-// });
-
-// Event listener for the = button
-//  TRY 2
-document.getElementById("btn20").addEventListener("click", function() {
-    // Check if content only contains numbers, +, -, *, /, or .
-    if (/^[0-9+\-*/.()]+$/.test(content)) {
-        try {
-            content = eval(content); // Safely evaluate the expression
-            document.getElementById("input").value = content;
-        } catch (e) {
-            document.getElementById("input").value = "Error"; // Display error for invalid expressions
-        }
-    } else {
-        document.getElementById("input").value = "Invalid input"; // Show error for invalid characters
-    }
-});
 
 // // Event listener for the = button    
-// //  TRY 3
+// //  TRY 1
+// // Event listener for the = button    
 // document.getElementById("btn20").addEventListener("click", function() {
-//     try {
-//         // Function constructor to evaluate the expression safely
-//         content =  new Function(`return ${content}`)();
-//         document.getElementById("input").value = content;
-//     } catch (e) {
-//         document.getElementById("input").value = "Error";
+// try {
+// // Function constructor to evaluate the expression safely
+// document.getElementById("input").value =  eval(content.value);
+// // document.getElementById("input").value = content;
+// } catch (error) {
+// document.getElementById("input").value = "Error";
+// }
+// });
+
+
+// Event listener for the = button
+// TRY 2
+document.getElementById("btn20").addEventListener("click", function() {
+    content = eval(content);
+    document.getElementById("input").value = content;
+});    
+
+
+// Event listener for the = button
+//  TRY 3
+// document.getElementById("btn20").addEventListener("click", function() {
+//     // Check if content only contains numbers, +, -, *, /, or .    
+//     if (/^[0-9+\-*/.()]+$/.test(content)) {
+//         try {
+//             content = eval(content); // Safely evaluate the expression    
+//             document.getElementById("input").value = content;
+//         } catch (e) {
+//             document.getElementById("input").value = "Error"; // Display error for invalid expressions    
+//         }
+//     } else {
+//         document.getElementById("input").value = "Invalid input"; // Show error for invalid characters    
 //     }
 // });
 
 
 
+// // Event listener for the = button    
+// //  TRY 4
+// document.getElementById("btn20").addEventListener("click", function() {
+// try {
+// // Function constructor to evaluate the expression safely    
+// content =  new Function(`return ${content}`)();
+// document.getElementById("input").value = content;
+// } catch (e) {
+// document.getElementById("input").value = "Error";    
+// }
+// });
+            
+            
+            
+// // Event listener for the = button    
+// //  TRY 5
+// document.getElementById("btn20").addEventListener("click", function() {
+// try {
+// // Get the content of the input element (assuming it's where the user types an expression)    
+//const content = document.getElementById("input").value;
+
+// //Evaluate the expression and assign the result to the input's value
+// document.getElementById("input").value = eval(content);
+//  } catch (error) {
+// //Display an error message if evaluation fails    
+// document.getElementById("input").value = "Error";
+// }
+// });
 
 
 
